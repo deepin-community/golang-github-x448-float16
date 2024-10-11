@@ -1,15 +1,29 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-x448-float16
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Mathias Gibbens <mathias@calenhad.com>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-x448-float16
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-x448-float16.git
+Homepage: https://github.com/x448/float16
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/x448/float16
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-x448-float16-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: IEEE 754 half-precision format (library)
+ x448/float16 package provides IEEE 754 half-precision
+ floating-point format (binary16) with IEEE 754 default
+ rounding for conversions. IEEE 754-2008 refers to this
+ 16-bit floating-point format as binary16.
+ .
+ IEEE 754 default rounding ("Round-to-Nearest
+ RoundTiesToEven") is considered the most accurate and
+ statistically unbiased estimate of the true result.

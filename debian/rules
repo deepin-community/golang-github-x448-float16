@@ -1,4 +1,8 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	# On some hardware, such as arm*, 10 minutes isn't always quite enough time for the tests to run
+	dh_auto_test -- -timeout=20m

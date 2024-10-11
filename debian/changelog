@@ -1,5 +1,18 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-x448-float16 (0.8.4-3) unstable; urgency=medium
 
-  * Initial release
+  * Extend timeout for running tests to prevent spurious build failures on
+    slower hardware
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Mathias Gibbens <mathias@calenhad.com>  Sun, 28 Nov 2021 20:29:30 +0100
+
+golang-github-x448-float16 (0.8.4-2) unstable; urgency=medium
+
+  * Source only upload for testing migration
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Thu, 25 Nov 2021 10:57:50 +0100
+
+golang-github-x448-float16 (0.8.4-1) unstable; urgency=medium
+
+  * Initial release (Closes: #998761)
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Tue, 09 Nov 2021 08:48:14 +0100
